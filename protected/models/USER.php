@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "tbl_user".
+ * This is the model class for table "dz_user".
  *
- * The followings are the available columns in table 'tbl_user':
+ * The followings are the available columns in table 'dz_user':
  * @property integer $id
  * @property string $username
  * @property string $password
@@ -18,6 +18,16 @@ class User extends CActiveRecord
 	{
 		return '{{user}}';
 	}
+	
+	public function validatePassword($password)
+	{
+		return $this->hashPassword($password,$this->salt)===$this->password;
+	}
+	
+	public function hashPassword($password,$salt)
+	{
+		return md5($salt.$password);
+	}
 
 	/**
 	 * @return array validation rules for model attributes.
@@ -28,6 +38,7 @@ class User extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('username, password, email', 'required'),
+				array('username','unique'),
 			array('username, password, email', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -85,6 +96,14 @@ class User extends CActiveRecord
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
+	}
+	
+	protected function beforeSave() {
+		if ($this->isNewRecord) {
+			$this->password = md5($this->password);
+			$this->createdTime = time();
+		}
+		return true;
 	}
 
 	/**

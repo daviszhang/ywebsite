@@ -58,10 +58,9 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=dz_ycms',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => '123456',
 			'charset' => 'utf8',
-		    //pre_
-// 		    'tablePrefix'=>'dz_',
+		    //pre_ 
 		    'tablePrefix' => 'dz_',
 		),
 		
@@ -90,6 +89,6 @@ return array(
 	// using Yii::app()->params['paramName']
 	'params'=>array(
 		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
+		'adminEmail'=>'webmaster@163.com',
 	),
 );

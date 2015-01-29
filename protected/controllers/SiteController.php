@@ -32,6 +32,10 @@ class SiteController extends Controller
 		$this->render('index');
 		
 	}
+	
+// 	public function actionSay($message = 'hello'){
+// 		return $this->render('say', ['message' => $message]);
+// 	}
 
 	/**
 	 * This is the action to handle external exceptions.

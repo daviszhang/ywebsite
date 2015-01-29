@@ -8,9 +8,30 @@
 							<header>
 								<h1>Hi. I'm <strong>Davis Zhang</strong>.</h1>
 							</header>
-							<p>And this is <strong>Miniport</strong>, a free, fully responsive HTML5 site template designed by <a href="http://n33.co/">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a> &amp; released under the <a href="http://html5up.net/license/">CCA license</a>.</p>
-							<a href="#work" class="button button-big">Learn about what I do</a>
+							 <form>
+							 <div class="col-sm-6">
+<!-- 										<h3 class="header blue lighter smaller"> -->
+<!-- 											<i class="icon-terminal smaller-90"></i> -->
+<!-- 											Autocomplete -->
+<!-- 										</h3> -->
+										<div class="row">
+											<div class="col-sm-8 col-md-7">
+												<input id="tags" type="text" class="form-control" />
+												<div class="space-4"></div>
+
+												<input id="search" type="text" class="form-control" placeholder="Type 'a' or 'h'" />
+											</div>
+										</div>
+								</div>
+							 <button type="submit" class="btn green pull-right">
+
+								Learn about what I do 
+
+							</button> 
+							 </form>
+							
 						</div>
 					</div>
 				</article>
 </div>
+ 

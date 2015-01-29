@@ -13,14 +13,14 @@ class ManagerController extends Controller
 //             return $this->goHome();
 //         }
 
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        } else {
-            return $this->render('login', [
-                'model' => $model,
-            ]);
-        }
+//         $model = new LoginForm();
+//         if ($model->load(Yii::$app->request->post()) && $model->login()) {
+//             return $this->goBack();
+//         } else {
+//             return $this->render('login', [
+//                 'model' => $model,
+//             ]);
+//         }
     }
     function actionCat(){
        $sql="select * from {{goods}}";

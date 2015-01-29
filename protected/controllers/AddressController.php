@@ -13,7 +13,7 @@ class AddressController extends Controller
 //         var_dump(Yii::app()->db);
     }
     
-    function actionFind(){
+    function actionIndex(){
         //         echo 'i want to login system';
         $this ->render("address");
     }
